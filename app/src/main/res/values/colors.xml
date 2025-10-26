@@ -1,0 +1,7 @@
+<resources>
+    <color name="purple_main">#7B47E2</color>
+    <color name="light_background">#F4EAFD</color>
+    <color name="light_text">#000000</color>
+    <color name="dark_background">#121212</color>
+    <color name="dark_text">#FFFFFF</color>
+</resources>
