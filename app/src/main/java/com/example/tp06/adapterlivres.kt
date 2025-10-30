@@ -37,20 +37,20 @@ class AdapterLivres(
         holder.tvPrix.text = "Prix: ${livre.prix} DH"
         holder.chkDispo.isChecked = livre.disponible
 
-        // تحميل الصورة عبر Glide
+   
         Glide.with(holder.itemView.context)
             .load(livre.imageUrl)
             .into(holder.imgLivre)
 
-        // ✅ تغيير الحالة عند النقر
+       
         holder.chkDispo.setOnCheckedChangeListener { _, isChecked ->
             livre.disponible = isChecked
             val msg = if (isChecked) "✅ ${livre.titre} est maintenant disponible"
-            else "❌ ${livre.titre} est maintenant indisponible"
+            else " ${livre.titre} est maintenant indisponible"
             Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
         }
 
-        // عند الضغط على العنصر، نعرض Dialog بالمعلومات
+       
         holder.itemView.setOnClickListener {
             val dispoText = if (livre.disponible) "Disponible" else "Non disponible"
             val dispoColor = if (livre.disponible) Color.GREEN else Color.RED
